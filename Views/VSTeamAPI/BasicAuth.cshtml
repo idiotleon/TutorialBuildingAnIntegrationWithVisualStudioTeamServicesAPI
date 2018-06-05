@@ -1,0 +1,27 @@
+﻿@model string
+@{
+    ViewBag.Title = "BasicAuth";
+}
+
+<h2>BasicAuth</h2>
+@using (Html.BeginForm("BasicAuth", "VSTeamAPI", FormMethod.Post))
+{
+    <form>
+        <div class="form-group">
+            <label for="InputUserName">User Name</label>
+            <input type="text" class="form-control" id="username" name="username" placeholder="User Name" />
+        </div>
+        <div class="form-group">
+            <label for="InputPassword">Password</label>
+            <input type="password" class="form-control" id="password"
+                   name="password" placeholder="password or personal access token" />
+        </div>
+        <div class="form-group">
+            <label for="InputAccount">Account</label>
+            <input type="text" class="form-control" id="account"
+                   name="account" placeholder="Visual Studio Team Services Account" value="PluralSightProjectTFJ" />
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+}
+

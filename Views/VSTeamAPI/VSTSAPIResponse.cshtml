@@ -1,0 +1,11 @@
+﻿@model string
+@using Newtonsoft.Json
+@{
+    ViewBag.Title = "VSTSAPIResponse";
+}
+
+<h2>VSTSAPIResponse</h2>
+<pre>
+    @Html.Raw(JsonConvert.SerializeObject(JsonConvert.DeserializeObject(Model), Formatting.Indented))
+</pre>
+
